@@ -22,4 +22,11 @@ FORCE:
 	-rm $(distdir).tar.gz > /dev/null 2>&1
 	-rm -rf $(distdir) > /dev/null 2>&1
 
-.PHONY: FORCE all clean dist
+distcheck: $(distdir).tar.gz
+	gzip -cd $(distdir).tar.gz | tar xvf -
+	cd $(distdir) && $(MAKE) all
+	cd $(distdir) && $(MAKE) clean
+	rm -rf $(distdir)
+	@echo "*** Package $(distdir).tar.gz is ready for distribution."
+
+.PHONY: FORCE all clean dist distcheck
