@@ -11,8 +11,7 @@ check: all
 	@echo "*** ALL TESTS PASSED ***"
 
 install:
-	cp jupiter /usr/bin
-	chown root:root /usr/bin/jupiter
-	chmod +x /usr/bin/jupiter
+	install -d $(prefix)/bin
+	install -m 0755 jupiter $(prefix)/bin
 
 .PHONY: all clean check
