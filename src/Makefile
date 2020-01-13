@@ -9,6 +9,10 @@ clean:
 check: all
 	./jupiter | grep "Hello from .*jupiter!"
 	@echo "*** ALL TESTS PASSED ***"
-	$(MAKE) clean
+
+install:
+	cp jupiter /usr/bin
+	chown root:root /usr/bin/jupiter
+	chmod +x /usr/bin/jupiter
 
 .PHONY: all clean check
