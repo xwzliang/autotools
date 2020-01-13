@@ -14,4 +14,7 @@ install:
 	install -d $(prefix)/bin
 	install -m 0755 jupiter $(prefix)/bin
 
+uninstall:
+	-rm $(prefix)/bin/jupiter
+
 .PHONY: all clean check
