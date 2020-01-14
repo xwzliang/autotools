@@ -11,10 +11,10 @@ check: all
 	@echo "*** ALL TESTS PASSED ***"
 
 install:
-	install -d $(bindir)
-	install -m 0755 jupiter $(bindir)
+	install -d $(DESTDIR)$(bindir)
+	install -m 0755 jupiter $(DESTDIR)$(bindir)
 
 uninstall:
-	-rm $(bindir)/jupiter
+	-rm $(DESTDIR)$(bindir)/jupiter
 
 .PHONY: all clean check

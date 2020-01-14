@@ -33,8 +33,8 @@ distcheck: $(distdir).tar.gz
 	gzip -cd $(distdir).tar.gz | tar xvf -
 	cd $(distdir) && $(MAKE) all
 	cd $(distdir) && $(MAKE) check
-	cd $(distdir) && $(MAKE) prefix=$${PWD}/_init install
-	cd $(distdir) && $(MAKE) prefix=$${PWD}/_init uninstall
+	cd $(distdir) && $(MAKE) DESTDIR=$${PWD}/_init install
+	cd $(distdir) && $(MAKE) DESTDIR=$${PWD}/_init uninstall
 	@remaining="`find $${PWD}/$(distdir)/_inst -type f | wc -l`";	\
 	if test "$${remaining}" -ne 0; then	\
 		echo "*** $${remaining} file(s) remaining in stage directory!";	\
