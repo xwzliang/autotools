@@ -1,7 +1,9 @@
 all: jupiter
 
+CFLAGS = -g -O0
+
 jupiter: main.c
-	gcc -g -O0 -o $@ main.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ main.c
 
 clean:
 	-rm jupiter
