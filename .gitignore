@@ -1,6 +1,7 @@
 *.tar.gz
 autom4te.cache/
 configure
-config.log
+*.log
 config.status
 Makefile
+configure.scan
