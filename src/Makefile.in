@@ -11,12 +11,16 @@ prefix		= @prefix@
 exec_prefix	= @exec_prefix@
 bindir		= @bindir@
 
+# VPATH-specific substitution variables
+srcdir		= @srcdir@
+VPATH		= @srcdir@
+
 all: jupiter
 
 CFLAGS = -g -O0
 
 jupiter: main.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ main.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $<
 
 clean:
 	-rm jupiter
