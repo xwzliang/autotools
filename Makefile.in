@@ -29,6 +29,8 @@ $(distdir): FORCE
 	cp $(srcdir)/configure.ac $(distdir)
 	cp $(srcdir)/configure $(distdir)
 	cp $(srcdir)/Makefile.in $(distdir)
+	cp $(srcdir)/config.h.in $(distdir)
+	cp $(srcdir)/install-sh $(distdir)
 	cp $(srcdir)/src/Makefile.in $(distdir)/src
 	cp $(srcdir)/src/main.c $(distdir)/src
 
