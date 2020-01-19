@@ -20,7 +20,7 @@ all: jupiter
 CFLAGS = -g -O0
 
 jupiter: main.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $<
+	$(CC) -I. -I$(srcdir) -I.. $(CPPFLAGS) $(CFLAGS) -o $@ $<
 
 clean:
 	-rm jupiter
