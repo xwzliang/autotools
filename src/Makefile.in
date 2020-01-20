@@ -19,6 +19,11 @@ VPATH		= @srcdir@
 CC			= @CC@
 CFLAGS		= @CFLAGS@
 CPPFLAGS	= @CPPFLAGS@
+INSTALL		= @INSTALL@
+INSTALL_DATA	= @INSTALL_DATA@
+INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+INSTALL_SCRIPT	= @INSTALL_SCRIPT@
+
 
 all: jupiter
 
@@ -33,8 +38,8 @@ check: all
 	@echo "*** ALL TESTS PASSED ***"
 
 install:
-	install -d $(DESTDIR)$(bindir)
-	install -m 0755 jupiter $(DESTDIR)$(bindir)
+	$(INSTALL) -d $(DESTDIR)$(bindir)
+	$(INSTALL_PROGRAM) -m 0755 jupiter $(DESTDIR)$(bindir)
 
 uninstall:
 	-rm $(DESTDIR)$(bindir)/jupiter
