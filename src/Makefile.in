@@ -17,6 +17,7 @@ VPATH		= @srcdir@
 
 # Tool-specific substitution variables
 CC			= @CC@
+LIBS		= @LIBS@
 CFLAGS		= @CFLAGS@
 CPPFLAGS	= @CPPFLAGS@
 INSTALL		= @INSTALL@
@@ -28,7 +29,7 @@ INSTALL_SCRIPT	= @INSTALL_SCRIPT@
 all: jupiter
 
 jupiter: main.c
-	$(CC) -I. -I$(srcdir) -I.. $(CPPFLAGS) $(CFLAGS) -o $@ $<
+	$(CC) -I. -I$(srcdir) -I.. $(CPPFLAGS) $(CFLAGS) -o $@ $< $(LIBS)
 
 clean:
 	-rm jupiter
