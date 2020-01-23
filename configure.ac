@@ -14,10 +14,24 @@ _DEBUG_END_
 AC_PROG_INSTALL
 
 # Checks for libraries.
-AC_SEARCH_LIBS([pthread_create], [pthread])
+have_pthreads=no
+AC_SEARCH_LIBS([pthread_create], [pthread], [have_pthreads=yes])
 
 # Checks for header files.
-AC_CHECK_HEADERS([stdlib.h pthread.h])
+AC_CHECK_HEADERS([stdlib.h])
+
+if test "x${have_pthreads}" = xyes; then
+	AC_CHECK_HEADERS([pthread.h], [], [have_pthreads=no])
+fi
+
+if test "x${have_pthreads}" = xno; then
+	AC_MSG_WARN([
+	--------------------------------------------------
+	Unable to find pthreads on this system.
+	Building a single-threaded version.
+	--------------------------------------------------
+	])
+fi
 
 # Checks for typedefs, structures, and compiler characteristics.
 
