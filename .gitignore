@@ -5,6 +5,12 @@ configure
 config.status
 Makefile
 configure.scan
-config.h.in
 config.h
 install-sh
+/COPYING
+/INSTALL
+*.in
+/aclocal.m4
+/compile
+/depcomp
+/missing
