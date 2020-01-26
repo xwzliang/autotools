@@ -53,5 +53,6 @@ fi
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+                 src/Makefile
+				 temp/Makefile])
 AC_OUTPUT
