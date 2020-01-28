@@ -1,1 +1,1 @@
-SUBDIRS = src temp
+SUBDIRS = common src temp
