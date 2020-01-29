@@ -1,1 +1,1 @@
-SUBDIRS = common src temp
+SUBDIRS = common include libjup src temp
