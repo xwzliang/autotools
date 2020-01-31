@@ -18,3 +18,8 @@ install-sh
 /stamp-h1
 /test-driver
 /common/.deps/
+/config.sub
+/libjup/.deps/
+/ltmain.sh
+/config.guess
+/libtool
