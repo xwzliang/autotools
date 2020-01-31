@@ -1,5 +1,6 @@
-#include "jupcommon.h"
+#include <libjupiter.h>
 
 int main(int argc, char * argv[]) {
-	return print_routine(argv[0]);
+	jupiter_print(argv[0]);
+	return 0;
 }
