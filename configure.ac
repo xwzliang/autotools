@@ -15,7 +15,7 @@ _DEBUG_START_
 AC_CHECK_PROG([bash_var], [bash], [yes], [no], , [/usr/sbin/bash])
 _DEBUG_END_
 AC_PROG_INSTALL
-AC_PROG_RANLIB
+# AC_PROG_RANLIB
 AM_PROG_CC_C_O
 
 # Checks for libraries.
